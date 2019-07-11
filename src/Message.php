@@ -1,7 +1,7 @@
 <?php
 namespace sbrendtro\sendgrid;
 
-use wadeshuler\Message as BaseMessage;
+use wadeshuler\sendgrid\Message as BaseMessage;
 
 class Message extends BaseMessage
 {
