@@ -13,7 +13,12 @@ class Message extends BaseMessage
         $this->from = $from;
         if ( ! $this->replyTo )
         {
-            $reply = is_array($from) ? $from[0] : $from;
+            $reply = $from;
+            if ( is_array($reply) )
+            {
+                $emails = array_keys($reply);
+                $reply = array_shift($emails);
+            }
             $this->setReplyTo($reply);
         }
         return $this;
